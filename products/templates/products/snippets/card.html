@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+    {% if obj.image %}
+      <img class="card-img-top" src="{{obj.image.url}}" alt="{{obj.title}}">
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{obj.title}}</h5>
+      <p class="card-text">{{obj.createDate|timesince}}ago</p>
+      <p class="card-text">{{obj.description|truncatewords:15}}</p>
+      <a href="{{obj.get_abs_url}}" class="btn btn-primary">View</a>
+    </div>
+  </div>
